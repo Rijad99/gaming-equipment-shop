@@ -1,0 +1,30 @@
+.menu_icon
+    padding: 1rem
+    cursor: pointer
+
+    .line:nth-child(2)
+        transition: unset
+
+    &.menu_icon_close
+        transform: translateX(-55px)
+
+        .line
+            width: 13px
+
+        .line
+            &:first-child
+                transform: translateY(3.5px) rotate(-45deg)
+
+            &:nth-child(2)
+                opacity: 0
+
+            &:last-child
+                transform: rotate(45deg)
+
+    .line 
+        width: 20px
+        height: 2px
+        background-color: $white
+
+        &:not(:last-child)
+            margin-bottom: 4px

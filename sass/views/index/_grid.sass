@@ -4,6 +4,18 @@
     grid-template-rows: 450px calc(100vh - 450px)
     grid-template-areas: "layout_row_one" "layout_row_two"
 
+    &.sidebar_active
+        grid-template-columns: 350px calc(100vw - 350px)
+        grid-template-areas: "layout_sidebar layout_row_one" "layout_sidebar layout_row_two"
+
+        .layout_row_one 
+            grid-template-columns: 100%
+
+    .layout_sidebar 
+        grid-area: layout_sidebar
+        background-color: $lighterGray
+        border-right: 1px solid $lightGray
+
     .layout_row_one
         grid-area: layout_row_one
         background-color: $lightGray
