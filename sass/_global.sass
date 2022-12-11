@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap')
 @import "./_variables"
 @import "./_media-queries"
+@import "./_mixins"
 
 
     
@@ -30,8 +31,10 @@ input
 
 .circle 
     border-radius: 50%
-    box-shadow: 0 5px 15px rgba($black, .75)
-    position: relative
+
+    &.small 
+        width: 20px
+        height: 20px
 
     &.medium
         width: 35px

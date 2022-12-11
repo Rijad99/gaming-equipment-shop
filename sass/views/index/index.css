@@ -34,8 +34,10 @@ input::placeholder {
 
 .circle {
   border-radius: 50%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.75);
-  position: relative;
+}
+.circle.small {
+  width: 20px;
+  height: 20px;
 }
 .circle.medium {
   width: 35px;
@@ -125,6 +127,8 @@ input::placeholder {
 }
 
 .user {
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.75);
   cursor: pointer;
 }
 .user img {
@@ -150,6 +154,23 @@ input::placeholder {
 .search .search_icon {
   width: 21px;
   margin: 0.25rem 0.5rem 0 0;
+}
+
+.cart {
+  background-color: rgb(254, 101, 90);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart .cart_items {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.price {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  margin: 2px 0 0 0.5rem;
 }
 
 .__nav .col {
