@@ -1,0 +1,37 @@
+.grid_layout 
+    display: grid
+    grid-template-columns: 100vw
+    grid-template-rows: 450px calc(100vh - 450px)
+    grid-template-areas: "layout_row_one" "layout_row_two"
+
+    .layout_row_one
+        grid-area: layout_row_one
+        background-color: $lightGray
+        display: grid
+        grid-template-columns: 100vw
+        grid-template-rows: 115px calc(100% - 115px)
+        grid-template-areas: "layout_row_one_nav" "layout_row_one_content"
+        
+        .__nav
+            grid-area: layout_row_one_nav
+            display: grid
+            grid-template-columns: 200px auto 200px 100px
+
+        .__content
+            grid-area: layout_row_one_content
+            display: grid
+            grid-template-columns: 200px auto 500px
+
+    .layout_row_two
+        grid-area: layout_row_two
+        background-color: $lighterGray
+        display: grid
+        grid-template-columns: 200px auto 150px 250px
+
+.row 
+    .col:nth-child(1)
+        padding-left: 2rem
+
+.row:not(:last-child)
+    .col:last-child
+        padding-right: 2rem

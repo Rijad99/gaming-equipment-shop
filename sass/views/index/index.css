@@ -9,4 +9,43 @@
 body {
   width: 100vw;
   overflow-x: hidden;
+}
+
+.grid_layout {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 450px calc(100vh - 450px);
+  grid-template-areas: "layout_row_one" "layout_row_two";
+}
+.grid_layout .layout_row_one {
+  grid-area: layout_row_one;
+  background-color: rgb(32, 35, 34);
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 115px calc(100% - 115px);
+  grid-template-areas: "layout_row_one_nav" "layout_row_one_content";
+}
+.grid_layout .layout_row_one .__nav {
+  grid-area: layout_row_one_nav;
+  display: grid;
+  grid-template-columns: 200px auto 200px 100px;
+}
+.grid_layout .layout_row_one .__content {
+  grid-area: layout_row_one_content;
+  display: grid;
+  grid-template-columns: 200px auto 500px;
+}
+.grid_layout .layout_row_two {
+  grid-area: layout_row_two;
+  background-color: rgb(24, 25, 25);
+  display: grid;
+  grid-template-columns: 200px auto 150px 250px;
+}
+
+.row .col:nth-child(1) {
+  padding-left: 2rem;
+}
+
+.row:not(:last-child) .col:last-child {
+  padding-right: 2rem;
 }/*# sourceMappingURL=index.css.map */
