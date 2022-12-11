@@ -73,18 +73,18 @@ input::placeholder {
 .grid_layout .layout_row_one .__nav {
   grid-area: layout_row_one_nav;
   display: grid;
-  grid-template-columns: 12.5vw auto 12.5vw 5vw;
+  grid-template-columns: 200px auto 200px 100px;
 }
 .grid_layout .layout_row_one .__content {
   grid-area: layout_row_one_content;
   display: grid;
-  grid-template-columns: 12.5vw auto 30vw;
+  grid-template-columns: 200px auto 30vw;
 }
 .grid_layout .layout_row_two {
   grid-area: layout_row_two;
   background-color: rgb(24, 25, 25);
   display: grid;
-  grid-template-columns: 12.5vw auto 10vw 15vw;
+  grid-template-columns: 200px auto 10vw 15vw;
 }
 
 .row .col:nth-child(1) {
