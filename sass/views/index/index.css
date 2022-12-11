@@ -180,4 +180,33 @@ input::placeholder {
 }
 .__nav .col:last-child {
   justify-content: flex-end;
+}
+
+.content_row_one_col_two h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  line-height: 1.4;
+}
+.content_row_one_col_two .rating img {
+  width: 13px;
+}
+.content_row_one_col_two .rating small {
+  color: rgb(95, 97, 96);
+  margin-left: 0.35rem;
+  font-weight: 600;
+}
+
+.__content .col {
+  display: flex;
+  align-items: center;
+}
+.__content .col:last-child {
+  justify-content: flex-end;
+}
+
+.col.content_row_one_col_two {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }/*# sourceMappingURL=index.css.map */
