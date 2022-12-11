@@ -8,6 +8,7 @@
 
 body {
   width: 100vw;
+  background-color: rgb(32, 35, 34);
   overflow-x: hidden;
 }
 
@@ -44,31 +45,41 @@ input::placeholder {
   height: 35px;
 }
 
+.layout_sidebar {
+  width: 400px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: rgb(24, 25, 25);
+  border-right: 1px solid rgb(32, 35, 34);
+  transform: translateX(-400px);
+}
+
 .grid_layout {
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 450px calc(100vh - 450px);
+  grid-template-rows: 40vh 60vh;
   grid-template-areas: "layout_row_one" "layout_row_two";
+  transition: all 1200ms ease;
 }
 .grid_layout.sidebar_active {
-  grid-template-columns: 350px calc(100vw - 350px);
-  grid-template-areas: "layout_sidebar layout_row_one" "layout_sidebar layout_row_two";
+  transform: translateX(400px);
+  grid-template-columns: calc(100vw - 400px);
 }
 .grid_layout.sidebar_active .layout_row_one {
-  grid-template-columns: 100%;
+  grid-template-columns: calc(100vw - 400px);
 }
-.grid_layout .layout_sidebar {
-  grid-area: layout_sidebar;
-  background-color: rgb(24, 25, 25);
-  border-right: 1px solid rgb(32, 35, 34);
+.grid_layout.sidebar_active .layout_sidebar {
+  transform: translateX(-400px);
 }
 .grid_layout .layout_row_one {
   grid-area: layout_row_one;
   background-color: rgb(32, 35, 34);
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 115px calc(100% - 115px);
+  grid-template-rows: 12.5vh calc(100% - 12.5vh);
   grid-template-areas: "layout_row_one_nav" "layout_row_one_content";
+  transition: all 1200ms ease;
 }
 .grid_layout .layout_row_one .__nav {
   grid-area: layout_row_one_nav;
@@ -98,9 +109,7 @@ input::placeholder {
 .menu_icon {
   padding: 1rem;
   cursor: pointer;
-}
-.menu_icon .line:nth-child(2) {
-  transition: unset;
+  z-index: 1;
 }
 .menu_icon.menu_icon_close {
   transform: translateX(-55px);
@@ -121,6 +130,7 @@ input::placeholder {
   width: 20px;
   height: 2px;
   background-color: rgb(255, 255, 255);
+  transition: all 300ms ease;
 }
 .menu_icon .line:not(:last-child) {
   margin-bottom: 4px;
@@ -197,9 +207,29 @@ input::placeholder {
   font-weight: 600;
 }
 
+.content_row_one_col_one {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.content_row_one_col_one h4 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  line-height: 1.3;
+  width: 0;
+  overflow: visible;
+}
+.content_row_one_col_one a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgb(95, 97, 96);
+  margin-top: 0.5rem;
+}
+
 .__content .col {
   display: flex;
-  align-items: center;
 }
 .__content .col:last-child {
   justify-content: flex-end;

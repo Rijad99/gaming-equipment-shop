@@ -1,28 +1,32 @@
-.grid_layout 
+@import "../../partials/sidebar/_sidebar"
+
+
+
+.grid_layout
     display: grid
     grid-template-columns: 100vw
-    grid-template-rows: 450px calc(100vh - 450px)
+    grid-template-rows: 40vh 60vh
     grid-template-areas: "layout_row_one" "layout_row_two"
+    transition: all 1200ms ease
 
     &.sidebar_active
-        grid-template-columns: 350px calc(100vw - 350px)
-        grid-template-areas: "layout_sidebar layout_row_one" "layout_sidebar layout_row_two"
+        transform: translateX(400px)
+        grid-template-columns: calc(100vw - 400px)
 
-        .layout_row_one 
-            grid-template-columns: 100%
+        .layout_row_one
+            grid-template-columns: calc(100vw - 400px)
 
-    .layout_sidebar 
-        grid-area: layout_sidebar
-        background-color: $lighterGray
-        border-right: 1px solid $lightGray
+        .layout_sidebar 
+            transform: translateX(-400px)
 
     .layout_row_one
         grid-area: layout_row_one
         background-color: $lightGray
         display: grid
         grid-template-columns: 100vw
-        grid-template-rows: 115px calc(100% - 115px)
+        grid-template-rows: 12.5vh calc(100% - 12.5vh)
         grid-template-areas: "layout_row_one_nav" "layout_row_one_content"
+        transition: all 1200ms ease
         
         .__nav
             grid-area: layout_row_one_nav
