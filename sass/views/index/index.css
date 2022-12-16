@@ -1,4 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+button {
+  background-color: transparent;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.btn_small {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(95, 97, 96);
+  border-radius: 50%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -43,6 +60,20 @@ input::placeholder {
 .circle.medium {
   width: 35px;
   height: 35px;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: rgb(95, 97, 96);
+}
+
+.icon {
+  width: 0.9rem;
 }
 
 .layout_sidebar {
@@ -221,11 +252,12 @@ input::placeholder {
   width: 0;
   overflow: visible;
 }
-.content_row_one_col_one a {
+.content_row_one_col_one a.back_link {
   font-size: 0.85rem;
   font-weight: 500;
   color: rgb(95, 97, 96);
   margin-top: 0.5rem;
+  text-decoration: underline;
 }
 
 .__content .col {
@@ -239,4 +271,67 @@ input::placeholder {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+}
+
+.col.content_row_two_col_one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.side_nav {
+  margin-top: 3rem;
+}
+.side_nav .link {
+  color: rgb(95, 97, 96);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.4rem 0;
+  position: relative;
+  z-index: 1;
+}
+.side_nav .link:hover > a {
+  color: rgb(255, 255, 255);
+}
+.side_nav .link:hover > a::before {
+  width: 100%;
+  opacity: 1;
+}
+.side_nav .link > a {
+  position: relative;
+}
+.side_nav .link > a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  height: 50%;
+  background-color: rgb(254, 101, 90);
+  z-index: -1;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+.side_nav .link.active_link a {
+  color: rgb(255, 255, 255);
+}
+.side_nav .link.active_link a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgb(254, 101, 90);
+  z-index: -1;
+  opacity: 1;
+}
+
+.button_group {
+  display: flex;
+  margin-bottom: 3.5rem;
+}
+.button_group .btn:first-child {
+  margin-right: 0.5rem;
 }/*# sourceMappingURL=index.css.map */
