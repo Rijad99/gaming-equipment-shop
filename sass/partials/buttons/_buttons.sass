@@ -3,10 +3,16 @@ button
     outline: 0
     border: none
     cursor: pointer
+    transition: all 300ms ease
 
 .btn_small 
     width: 3rem
     height: 3rem
     @include centerMiddle
     background-color: $lightestGray
+    border: 2px solid $lightestGray
     border-radius: 50%
+
+    &:hover 
+        background-color: transparent
+        box-shadow: 0 5px 15px rgba($black, .75)
