@@ -3,6 +3,7 @@
 @import "./_media-queries"
 @import "./_mixins"
 @import "./partials/buttons/_buttons"
+@import "./partials/prices/_prices"
 
 
     
@@ -31,17 +32,6 @@ input
         font-weight: 500
         color: $white
 
-.circle 
-    border-radius: 50%
-
-    &.small 
-        width: 20px
-        height: 20px
-
-    &.medium
-        width: 35px
-        height: 35px
-
 li 
     list-style-type: none
 
@@ -49,5 +39,24 @@ a
     text-decoration-line: none
     color: $lightestGray
 
+
+
 .icon 
     width: $iconSize
+
+.divider 
+    margin: 0 1.5rem
+    width: 2px
+    height: 3rem
+    background-color: $lightestGray
+
+.circle 
+    border-radius: 50%
+
+    &.small 
+        width: 26px
+        height: 26px
+
+    &.medium
+        width: 35px
+        height: 35px

@@ -5,14 +5,43 @@ button
     cursor: pointer
     transition: all 300ms ease
 
+.btn
+    @include centerMiddle 
+    background-color: $lightestGray
+    border: 2px solid $lightestGray
+    font-size: $small
+    font-weight: 600
+    text-transform: uppercase
+
+    &:hover
+        box-shadow: 0 5px 15px rgba($black, .10)
+
 .btn_small 
     width: 3rem
     height: 3rem
-    @include centerMiddle
-    background-color: $lightestGray
-    border: 2px solid $lightestGray
     border-radius: 50%
 
     &:hover 
         background-color: transparent
-        box-shadow: 0 5px 15px rgba($black, .75)
+
+.btn_large 
+    height: 3rem
+    padding: 0 2rem
+
+.btn_red
+    background-color: $red
+    border-color: $red
+
+    &:hover
+        background-color: transparent
+        color: $white
+
+.btn_white
+    background-color: transparent
+    border-color: $white
+
+    &:hover
+        background-color: $white
+
+    &:hover svg > circle
+        fill: $black
