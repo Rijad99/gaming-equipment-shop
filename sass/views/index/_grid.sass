@@ -42,7 +42,13 @@
         grid-area: layout_row_two
         background-color: $lighterGray
         display: grid
-        grid-template-columns: 200px auto 225px 200px
+        grid-template-columns: 200px auto 225px 240px
+
+    .row_two_col_four 
+        display: grid
+        grid-template-columns: 100%
+        grid-template-rows: calc(100% - (145px + 0.5rem)) 145px
+        row-gap: 0.5rem
 
 .row 
     .col:nth-child(1)

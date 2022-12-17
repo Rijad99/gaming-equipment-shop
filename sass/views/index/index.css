@@ -55,6 +55,12 @@ button {
   fill: rgb(0, 0, 0);
 }
 
+.btn_slider_large {
+  background-color: rgb(1, 1, 1);
+  border-color: rgb(1, 1, 1);
+  color: rgb(255, 255, 255);
+}
+
 .col_prices {
   display: flex;
   flex-direction: column;
@@ -125,8 +131,15 @@ a {
 
 .divider {
   margin: 0 1.5rem;
-  width: 2px;
+  width: 1px;
   height: 3rem;
+  background-color: rgb(95, 97, 96);
+}
+
+.divider_horizontal {
+  width: 100%;
+  margin: 0 1rem;
+  height: 1px;
   background-color: rgb(95, 97, 96);
 }
 
@@ -192,7 +205,13 @@ a {
   grid-area: layout_row_two;
   background-color: rgb(24, 25, 25);
   display: grid;
-  grid-template-columns: 200px auto 225px 200px;
+  grid-template-columns: 200px auto 225px 240px;
+}
+.grid_layout .row_two_col_four {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: calc(100% - (145px + 0.5rem)) 145px;
+  row-gap: 0.5rem;
 }
 
 .row .col:nth-child(1) {
@@ -362,6 +381,30 @@ a {
   justify-content: center;
 }
 
+.next_image {
+  display: flex;
+  align-items: center;
+  background-color: rgb(1, 1, 1);
+  overflow: hidden;
+}
+.next_image img {
+  filter: blur(3px);
+  transform: translateX(-235px);
+}
+
+.slider_numbers {
+  display: flex;
+  align-items: center;
+}
+.slider_numbers span {
+  color: rgb(255, 255, 255);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.slider_numbers .current_number {
+  color: rgb(254, 101, 90);
+}
+
 .__content .col {
   display: flex;
 }
@@ -387,7 +430,10 @@ a {
 }
 
 .col.row_two_col_three {
-  padding: 3.5rem 3.5rem 0 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3.5rem;
 }
 
 .side_nav {
