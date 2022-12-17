@@ -1,0 +1,31 @@
+.slider_box_image
+    width: 100%
+    height: 80px
+    display: flex
+    align-items: center
+    background-color: $darkGray
+    border: 1px solid $lightGray
+    margin-bottom: 1rem
+    overflow: hidden
+    cursor: pointer
+
+    img
+        width: 75px
+        transition: all 300ms ease
+
+    &:first-child
+        @include centerMiddle
+
+        img
+            align-self: flex-end
+
+    &:nth-child(2)      
+        justify-content: flex-end
+
+    &:hover 
+
+        img
+            transform: scale(1.15)
+
+    &:last-child
+        @include centerMiddle
