@@ -5,7 +5,7 @@
 .grid_layout
     display: grid
     grid-template-columns: 100vw
-    grid-template-rows: 40vh 60vh
+    grid-template-rows: 35vh 65vh
     grid-template-areas: "layout_row_one" "layout_row_two"
     transition: all 1200ms ease
 
@@ -32,6 +32,7 @@
             grid-area: layout_row_one_nav
             display: grid
             grid-template-columns: 200px auto 200px 100px
+            background-color: $lighterGray
 
         .__content
             grid-area: layout_row_one_content
@@ -51,7 +52,7 @@
         row-gap: 0.5rem
 
 .row 
-    .col:nth-child(1)
+    .col:nth-child(1), .col:nth-child(2)
         padding-left: 2rem
 
 .row:not(:last-child)
