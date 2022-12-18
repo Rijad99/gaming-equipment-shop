@@ -54,3 +54,33 @@
 
     .current_number
         color: $red
+
+.slider
+    display: flex
+    align-items: center
+    margin-bottom: 3.5rem
+    z-index: 1
+
+    .circles
+        display: flex
+        align-items: center
+        margin: 0 3.5rem
+
+    .circle_slider
+        background-color: $lightestGray
+        
+        &:not(:last-child)
+            margin-right: 0.7rem
+
+        &:not(.active_slide)
+            width: 4px
+            height: 4px
+
+        &.active_slide
+            background-color: $red
+
+.current_slider_image
+    position: absolute
+    top: 0
+    width: 615px
+    z-index: 1

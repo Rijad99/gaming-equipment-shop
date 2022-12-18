@@ -61,6 +61,19 @@ button {
   color: rgb(255, 255, 255);
 }
 
+.btn_slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_slider img {
+  width: 0.35rem;
+}
+.btn_slider.btn_slider_next {
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255);
+}
+
 .col_prices {
   display: flex;
   flex-direction: column;
@@ -145,6 +158,10 @@ a {
 
 .circle {
   border-radius: 50%;
+}
+.circle.smallest {
+  width: 7px;
+  height: 7px;
 }
 .circle.small {
   width: 26px;
@@ -410,6 +427,38 @@ a {
   color: rgb(254, 101, 90);
 }
 
+.slider {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3.5rem;
+  z-index: 1;
+}
+.slider .circles {
+  display: flex;
+  align-items: center;
+  margin: 0 3.5rem;
+}
+.slider .circle_slider {
+  background-color: rgb(95, 97, 96);
+}
+.slider .circle_slider:not(:last-child) {
+  margin-right: 0.7rem;
+}
+.slider .circle_slider:not(.active_slide) {
+  width: 4px;
+  height: 4px;
+}
+.slider .circle_slider.active_slide {
+  background-color: rgb(254, 101, 90);
+}
+
+.current_slider_image {
+  position: absolute;
+  top: 0;
+  width: 615px;
+  z-index: 1;
+}
+
 .__content .col {
   display: flex;
 }
@@ -432,6 +481,13 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.col.row_two_col_two {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
 }
 
 .col.row_two_col_three {
